@@ -13,7 +13,25 @@ from pathlib import Path
 
 class TRIZPatentLabeler:
     def __init__(self):
-        """Initialize the TRIZ Patent Labeler with 48 engineering parameters."""
+        """Initialize the TRIZ Patent Labeler with 48 engineering parameters.
+        
+        REFERENCES:
+        - TRIZ Parameters: Altshuller, G. (1984). "Creativity as an Exact Science"
+        - Ensemble Methods: Polikar, R. (2006). "Ensemble based systems in decision making"
+        - Patent Analysis: Yoon, B. & Park, Y. (2004). "A text-mining-based patent network"
+        - See REFERENCES.md for complete bibliography
+        
+        METHODOLOGY:
+        Uses ensemble approach combining:
+        1. Keyword matching (30% weight) - Domain-specific term matching
+        2. Semantic similarity (40% weight) - Contextual understanding via embeddings  
+        3. TF-IDF analysis (30% weight) - Statistical text analysis
+        
+        LIMITATIONS:
+        - Keywords are hand-crafted, not corpus-derived
+        - Fixed weights, not learned from training data
+        - No validation against ground truth dataset
+        """
         self.triz_parameters = {
             1: "Weight of moving object",
             2: "Weight of stationary object", 
