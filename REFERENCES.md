@@ -79,3 +79,5 @@ For future validation, consider:
 ### TRIZ-Patent Datasets:
 - **TRIZ-based patent analysis papers**: See Yoon & Park (2004), Trappey et al. (2006)
 - **Patent classification datasets**: USPTO CPC (Cooperative Patent Classification)
+
+https://chatgpt.com/share/68769f0b-a990-800c-8c73-62ef6654829e
