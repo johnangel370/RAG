@@ -1,11 +1,10 @@
-import pandas as pd
+import polars as pl
 import numpy as np
 from typing import List, Dict, Tuple
 import re
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
-from langchain_community.document_loaders import TextLoader, PyPDFLoader
-from langchain_text_splitters import RecursiveCharacterTextSplitter
+# Removed PDF/TXT loaders - JSON only processing
 from langchain_community.embeddings import HuggingFaceEmbeddings
 import json
 import os
@@ -149,20 +148,32 @@ class TRIZPatentLabeler:
             ngram_range=(1, 2)
         )
         
-    def load_patent_document(self, file_path: str) -> str:
-        """Load patent document from various formats."""
-        file_path = Path(file_path)
+    def load_patent_json(self, json_file_path: str) -> List[Dict]:
+        """Load patent documents from JSON file."""
+        with open(json_file_path, 'r', encoding='utf-8') as f:
+            return json.load(f)
+    
+    def combine_patent_text(self, patent_doc: Dict) -> str:
+        """Combine different sections of a patent document into a single text."""
+        sections = []
         
-        if file_path.suffix.lower() == '.pdf':
-            loader = PyPDFLoader(str(file_path))
-            docs = loader.load()
-            return ' '.join([doc.page_content for doc in docs])
-        elif file_path.suffix.lower() == '.txt':
-            loader = TextLoader(str(file_path))
-            docs = loader.load()
-            return docs[0].page_content
-        else:
-            raise ValueError(f"Unsupported file format: {file_path.suffix}")
+        # Add title if available
+        if 'title' in patent_doc and patent_doc['title']:
+            sections.append(f"Title: {patent_doc['title']}")
+        
+        # Add abstract if available
+        if 'abstract' in patent_doc and patent_doc['abstract']:
+            sections.append(f"Abstract: {patent_doc['abstract']}")
+        
+        # Add description if available
+        if 'description' in patent_doc and patent_doc['description']:
+            sections.append(f"Description: {patent_doc['description']}")
+        
+        # Add claims if available
+        if 'claims' in patent_doc and patent_doc['claims']:
+            sections.append(f"Claims: {patent_doc['claims']}")
+        
+        return ' '.join(sections)
     
     def preprocess_text(self, text: str) -> str:
         """Preprocess patent text for analysis."""
@@ -179,15 +190,13 @@ class TRIZPatentLabeler:
         sections = {
             'abstract': '',
             'claims': '',
-            'description': '',
-            'summary': ''
+            'description': ''
         }
         
         # Simple regex patterns to identify sections
         patterns = {
-            'abstract': r'abstract[:\s]*(.*?)(?=\n\n|\nclaims?|background|summary)',
+            'abstract': r'abstract[:\s]*(.*?)(?=\n\n|\nclaims?|background)',
             'claims': r'claims?[:\s]*(.*?)(?=\n\n|description|background)',
-            'summary': r'summary[:\s]*(.*?)(?=\n\n|claims?|description)',
             'description': r'(?:detailed\s+)?description[:\s]*(.*?)(?=\n\n|claims?|abstract)'
         }
         
@@ -270,8 +279,8 @@ class TRIZPatentLabeler:
         """Combine multiple scoring methods using ensemble approach."""
         if weights is None:
             weights = {
-                'keyword': 0.3,
-                'semantic': 0.4,
+                'keyword': 0.2,
+                'semantic': 0.5,
                 'tfidf': 0.3
             }
         
@@ -283,6 +292,8 @@ class TRIZPatentLabeler:
         # Normalize scores to 0-1 range
         def normalize_scores(scores):
             max_score = max(scores.values()) if scores.values() else 1
+            if max_score == 0.0:
+                max_score = 1
             return {k: v / max_score for k, v in scores.items()}
         
         keyword_scores = normalize_scores(keyword_scores)
@@ -300,13 +311,13 @@ class TRIZPatentLabeler:
         
         return final_scores
     
-    def label_patent(self, file_path: str, top_k: int = 5, threshold: float = 0.1) -> Dict:
-        """Label a patent document with TRIZ parameters."""
-        # Load and preprocess document
-        text = self.load_patent_document(file_path)
+    def label_patent_from_json(self, patent_doc: Dict, top_k: int = 5, threshold: float = 0.1) -> Dict:
+        """Label a patent document from JSON data with TRIZ parameters."""
+        # Combine patent text from JSON fields
+        text = self.combine_patent_text(patent_doc)
         processed_text = self.preprocess_text(text)
         
-        # Extract sections
+        # Extract sections from the combined text
         sections = self.extract_patent_sections(processed_text)
         
         # Calculate scores for each section
@@ -319,8 +330,7 @@ class TRIZPatentLabeler:
         section_weights = {
             'abstract': 0.3,
             'claims': 0.4,
-            'summary': 0.2,
-            'description': 0.1
+            'description': 0.3
         }
         
         overall_scores = {}
@@ -329,9 +339,10 @@ class TRIZPatentLabeler:
             total_weight = 0
             
             for section_name, scores in section_scores.items():
-                weight = section_weights.get(section_name, 0.1)
-                weighted_score += weight * scores.get(param_id, 0)
-                total_weight += weight
+                if section_name in section_weights:
+                    weight = section_weights[section_name]
+                    weighted_score += weight * scores.get(param_id, 0)
+                    total_weight += weight
             
             overall_scores[param_id] = weighted_score / total_weight if total_weight > 0 else 0
         
@@ -350,7 +361,9 @@ class TRIZPatentLabeler:
         
         # Prepare results
         results = {
-            'file_path': file_path,
+            'patent_id': patent_doc.get('id', 'unknown'),
+            'doc_num': patent_doc.get('doc_num', 'unknown'),
+            'title': patent_doc.get('title', 'unknown'),
             'top_parameters': [
                 {
                     'id': param_id,
@@ -372,40 +385,45 @@ class TRIZPatentLabeler:
         
         return results
     
-    def batch_label_patents(self, directory_path: str, output_file: str = None) -> List[Dict]:
-        """Label multiple patent documents in a directory."""
-        directory = Path(directory_path)
+    def batch_label_patents_from_json(self, json_file_path: str, output_file: str = None, limit: int = None) -> List[Dict]:
+        """Label multiple patent documents from JSON file."""
+        print(f"Loading patents from: {json_file_path}")
+        patent_docs = self.load_patent_json(json_file_path)
+        
+        if limit:
+            patent_docs = patent_docs[:limit]
+            print(f"Processing first {limit} patents...")
+        
         results = []
+        total_patents = len(patent_docs)
         
-        # Supported file extensions
-        supported_extensions = ['.txt', '.pdf']
-        
-        for file_path in directory.rglob('*'):
-            if file_path.suffix.lower() in supported_extensions:
-                try:
-                    print(f"Processing: {file_path.name}")
-                    result = self.label_patent(str(file_path))
-                    results.append(result)
-                except Exception as e:
-                    print(f"Error processing {file_path.name}: {e}")
-                    continue
+        for i, patent_doc in enumerate(patent_docs, 1):
+            try:
+                print(f"Processing patent {i}/{total_patents}: {patent_doc.get('title', 'Unknown title')[:50]}...")
+                result = self.label_patent_from_json(patent_doc)
+                results.append(result)
+            except Exception as e:
+                print(f"Error processing patent {patent_doc.get('id', 'unknown')}: {e}")
+                continue
         
         # Save results if output file specified
         if output_file:
-            with open(output_file, 'w') as f:
-                json.dump(results, f, indent=2)
+            with open(output_file, 'w', encoding='utf-8') as f:
+                json.dump(results, f, indent=2, ensure_ascii=False)
             print(f"Results saved to: {output_file}")
         
         return results
     
     def export_to_csv(self, results: List[Dict], output_file: str):
-        """Export results to CSV format."""
+        """Export results to CSV format using polars."""
         rows = []
         
         for result in results:
+            # JSON-based result
             base_row = {
-                'file_path': result['file_path'],
-                'filename': Path(result['file_path']).name
+                'patent_id': result.get('patent_id', 'unknown'),
+                'doc_num': result.get('doc_num', 'unknown'),
+                'title': result.get('title', 'unknown')[:100] + '...' if len(result.get('title', '')) > 100 else result.get('title', 'unknown')
             }
             
             # Add top parameters
@@ -417,8 +435,9 @@ class TRIZPatentLabeler:
             
             rows.append(base_row)
         
-        df = pd.DataFrame(rows)
-        df.to_csv(output_file, index=False)
+        # Create polars DataFrame and export to CSV
+        df = pl.DataFrame(rows)
+        df.write_csv(output_file)
         print(f"CSV exported to: {output_file}")
 
 
@@ -426,47 +445,27 @@ def main():
     """Main function to demonstrate usage."""
     labeler = TRIZPatentLabeler()
     
-    # Example usage
-    print("TRIZ Patent Labeler")
-    print("===================")
+    print("TRIZ Patent Labeler - JSON Processing")
+    print("=====================================")
     
-    # Get user input
-    choice = input("Choose option:\n1. Label single patent\n2. Batch label patents\nEnter choice (1 or 2): ")
-    
-    if choice == '1':
-        file_path = input("Enter patent file path: ")
-        if os.path.exists(file_path):
-            result = labeler.label_patent(file_path)
-            
-            print(f"\nResults for: {Path(file_path).name}")
-            print("-" * 50)
-            
-            for param in result['top_parameters']:
-                print(f"Parameter {param['id']}: {param['name']}")
-                print(f"  Score: {param['score']:.3f}")
-                print(f"  Confidence: {param['confidence']}")
-                print()
-        else:
-            print("File not found!")
-    
-    elif choice == '2':
-        directory_path = input("Enter directory path containing patents: ")
-        output_file = input("Enter output JSON file name (optional): ") or None
+    json_file_path = input("Enter JSON file path: ")
+    if os.path.exists(json_file_path):
+        limit_input = input("Enter limit (number of patents to process, or press Enter for all): ")
+        limit = int(limit_input) if limit_input.strip() else None
         
-        if os.path.exists(directory_path):
-            results = labeler.batch_label_patents(directory_path, output_file)
-            print(f"\nProcessed {len(results)} patents")
-            
-            # Ask if user wants CSV export
-            csv_export = input("Export to CSV? (y/n): ").lower() == 'y'
-            if csv_export:
-                csv_file = input("Enter CSV filename: ") or "patent_labels.csv"
-                labeler.export_to_csv(results, csv_file)
-        else:
-            print("Directory not found!")
-    
+        output_file = input("Enter output JSON file name (or press Enter for default): ") or "patent_triz_results.json"
+        
+        results = labeler.batch_label_patents_from_json(json_file_path, output_file, limit)
+        print(f"\nProcessed {len(results)} patents")
+        print(f"Results saved to: {output_file}")
+        
+        # Ask if user wants CSV export
+        csv_export = input("\nExport to CSV? (y/n): ").lower() == 'y'
+        if csv_export:
+            csv_file = input("Enter CSV filename (or press Enter for default): ") or "patent_triz_results.csv"
+            labeler.export_to_csv(results, csv_file)
     else:
-        print("Invalid choice!")
+        print("JSON file not found!")
 
 
 if __name__ == "__main__":
