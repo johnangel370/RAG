@@ -81,3 +81,7 @@ For future validation, consider:
 - **Patent classification datasets**: USPTO CPC (Cooperative Patent Classification)
 
 https://chatgpt.com/share/68769f0b-a990-800c-8c73-62ef6654829e
+
+[The Hidden Challenges of Domain-Adapting LLMs](https://www.arcee.ai/blog/the-hidden-obstacles-of-domain-adaptation-in-llms)
+[Classifying the TRIZ Contradiction Problem of the Patents Based on Engineering Parameters](https://link.springer.com/chapter/10.1007/978-3-319-13987-6_32)
+[整合TRIZ四十原則與演化趨勢探討產品創新之潛力](https://ir.lib.nycu.edu.tw/handle/11536/77077)
