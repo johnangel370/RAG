@@ -1,0 +1,159 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0" version="27.0.5">
+  <diagram id="6a731a19-8d31-9384-78a2-239565b7b9f0" name="Page-1">
+    <mxGraphModel dx="978" dy="542" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" background="none" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="VPrhysb8aqTPFq_6Ef2O-102" value="" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="420" y="340" width="300" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="7" style="fontStyle=1;strokeColor=#003366;strokeWidth=1;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" target="VPrhysb8aqTPFq_6Ef2O-64" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="320" y="90" as="sourcePoint" />
+            <mxPoint x="320" y="150" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="8" style="fontStyle=1;strokeColor=#003366;strokeWidth=1;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="1" source="VPrhysb8aqTPFq_6Ef2O-64" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="319.5" y="240" as="sourcePoint" />
+            <mxPoint x="320" y="300" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="VPrhysb8aqTPFq_6Ef2O-55" value="&lt;font face=&quot;Times New Roman&quot;&gt;USPTO&lt;/font&gt;&lt;div&gt;&lt;font face=&quot;標楷體&quot;&gt;專利資料庫&lt;/font&gt;&lt;/div&gt;" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" vertex="1" parent="1">
+          <mxGeometry x="280" y="10" width="79" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="VPrhysb8aqTPFq_6Ef2O-59" value="" style="group;fontFamily=標楷體;" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="237.5" y="290" width="164" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="VPrhysb8aqTPFq_6Ef2O-58" value="" style="shape=document;whiteSpace=wrap;html=1;boundedLbl=1;" vertex="1" parent="VPrhysb8aqTPFq_6Ef2O-59">
+          <mxGeometry x="34" y="10" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="VPrhysb8aqTPFq_6Ef2O-57" value="" style="shape=document;whiteSpace=wrap;html=1;boundedLbl=1;fontFamily=標楷體;" vertex="1" parent="VPrhysb8aqTPFq_6Ef2O-59">
+          <mxGeometry x="24" y="20" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="VPrhysb8aqTPFq_6Ef2O-56" value="未標記的專利文本" style="shape=document;whiteSpace=wrap;html=1;boundedLbl=1;fontFamily=標楷體;" vertex="1" parent="VPrhysb8aqTPFq_6Ef2O-59">
+          <mxGeometry x="14" y="30" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="VPrhysb8aqTPFq_6Ef2O-62" value="提取" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontFamily=標楷體;" vertex="1" parent="1">
+          <mxGeometry x="275" y="98" width="50" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="VPrhysb8aqTPFq_6Ef2O-63" value="專利號&lt;div&gt;標題&lt;br&gt;&lt;div&gt;摘要&lt;/div&gt;&lt;div&gt;描述&lt;/div&gt;&lt;div&gt;請求項&lt;/div&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontFamily=標楷體;" vertex="1" parent="1">
+          <mxGeometry x="325" y="85" width="60" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="VPrhysb8aqTPFq_6Ef2O-64" value="資料清理" style="rounded=1;whiteSpace=wrap;html=1;fontFamily=標楷體;" vertex="1" parent="1">
+          <mxGeometry x="260" y="170" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="VPrhysb8aqTPFq_6Ef2O-95" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="VPrhysb8aqTPFq_6Ef2O-68" target="VPrhysb8aqTPFq_6Ef2O-83">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="VPrhysb8aqTPFq_6Ef2O-96" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="VPrhysb8aqTPFq_6Ef2O-68" target="VPrhysb8aqTPFq_6Ef2O-86">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="VPrhysb8aqTPFq_6Ef2O-97" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.75;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="VPrhysb8aqTPFq_6Ef2O-68" target="VPrhysb8aqTPFq_6Ef2O-87">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="VPrhysb8aqTPFq_6Ef2O-68" value="&lt;div&gt;&lt;font face=&quot;Times New Roman&quot;&gt;48&lt;/font&gt;種工程參數表&lt;font face=&quot;Times New Roman&quot;&gt;&lt;/font&gt;&lt;/div&gt;&lt;font face=&quot;Times New Roman&quot;&gt;48&lt;/font&gt;種工程參數關鍵字詞庫" style="rounded=1;whiteSpace=wrap;html=1;fontFamily=標楷體;" vertex="1" parent="1">
+          <mxGeometry x="497.5" y="170" width="150" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="VPrhysb8aqTPFq_6Ef2O-71" value="&lt;font face=&quot;標楷體&quot;&gt;摘要&lt;/font&gt;&lt;div&gt;&lt;font face=&quot;Times New Roman&quot;&gt;weight&lt;/font&gt;&lt;/div&gt;" style="shape=document;whiteSpace=wrap;html=1;boundedLbl=1;" vertex="1" parent="1">
+          <mxGeometry x="431" y="350" width="70" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="VPrhysb8aqTPFq_6Ef2O-74" value="&lt;font face=&quot;標楷體&quot;&gt;描述&lt;/font&gt;&lt;div&gt;&lt;font face=&quot;Times New Roman&quot;&gt;weight&lt;/font&gt;&lt;/div&gt;" style="shape=document;whiteSpace=wrap;html=1;boundedLbl=1;" vertex="1" parent="1">
+          <mxGeometry x="535" y="350" width="70" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="VPrhysb8aqTPFq_6Ef2O-75" value="&lt;font face=&quot;標楷體&quot;&gt;請求項&lt;/font&gt;&lt;div&gt;&lt;font face=&quot;Times New Roman&quot;&gt;weight&lt;/font&gt;&lt;/div&gt;" style="shape=document;whiteSpace=wrap;html=1;boundedLbl=1;" vertex="1" parent="1">
+          <mxGeometry x="640" y="350" width="70" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="VPrhysb8aqTPFq_6Ef2O-83" value="&lt;font face=&quot;Times New Roman&quot;&gt;TF-IDF&lt;/font&gt;&lt;div&gt;&lt;font face=&quot;Times New Roman&quot;&gt;weight&lt;/font&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="535" y="280" width="75" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="VPrhysb8aqTPFq_6Ef2O-98" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="VPrhysb8aqTPFq_6Ef2O-86" target="VPrhysb8aqTPFq_6Ef2O-71">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="VPrhysb8aqTPFq_6Ef2O-86" value="&lt;font face=&quot;標楷體&quot;&gt;語意分析&lt;/font&gt;&lt;div&gt;&lt;font face=&quot;Times New Roman&quot;&gt;weight&lt;/font&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="430" y="280" width="75" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="VPrhysb8aqTPFq_6Ef2O-100" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="VPrhysb8aqTPFq_6Ef2O-87" target="VPrhysb8aqTPFq_6Ef2O-75">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="VPrhysb8aqTPFq_6Ef2O-87" value="&lt;font face=&quot;標楷體&quot;&gt;關鍵字&lt;/font&gt;&lt;div&gt;&lt;font face=&quot;Times New Roman&quot;&gt;weight&lt;/font&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="640" y="280" width="75" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="VPrhysb8aqTPFq_6Ef2O-99" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="VPrhysb8aqTPFq_6Ef2O-83">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="570" y="350" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="VPrhysb8aqTPFq_6Ef2O-101" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="VPrhysb8aqTPFq_6Ef2O-56">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="420" y="360" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="VPrhysb8aqTPFq_6Ef2O-105" value="" style="group;fontFamily=標楷體;" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="488" y="560" width="164" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="VPrhysb8aqTPFq_6Ef2O-106" value="" style="shape=document;whiteSpace=wrap;html=1;boundedLbl=1;" vertex="1" parent="VPrhysb8aqTPFq_6Ef2O-105">
+          <mxGeometry x="34" y="10" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="VPrhysb8aqTPFq_6Ef2O-107" value="" style="shape=document;whiteSpace=wrap;html=1;boundedLbl=1;fontFamily=標楷體;" vertex="1" parent="VPrhysb8aqTPFq_6Ef2O-105">
+          <mxGeometry x="24" y="20" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="VPrhysb8aqTPFq_6Ef2O-108" value="已標記的專利文本" style="shape=document;whiteSpace=wrap;html=1;boundedLbl=1;fontFamily=標楷體;" vertex="1" parent="VPrhysb8aqTPFq_6Ef2O-105">
+          <mxGeometry x="14" y="30" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="VPrhysb8aqTPFq_6Ef2O-109" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="VPrhysb8aqTPFq_6Ef2O-102" target="VPrhysb8aqTPFq_6Ef2O-111">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="VPrhysb8aqTPFq_6Ef2O-110" value="" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" target="VPrhysb8aqTPFq_6Ef2O-111">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="320" y="400" as="sourcePoint" />
+            <mxPoint x="390" y="480" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="320" y="490" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="VPrhysb8aqTPFq_6Ef2O-112" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="VPrhysb8aqTPFq_6Ef2O-111">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="570.2758620689656" y="570" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="VPrhysb8aqTPFq_6Ef2O-111" value="專利文本整合標記結果" style="rounded=1;whiteSpace=wrap;html=1;fontFamily=標楷體;" vertex="1" parent="1">
+          <mxGeometry x="505" y="460" width="130" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="VPrhysb8aqTPFq_6Ef2O-115" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="VPrhysb8aqTPFq_6Ef2O-113">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="510" y="729.7241379310344" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="VPrhysb8aqTPFq_6Ef2O-113" value="使用者輸入" style="rounded=1;whiteSpace=wrap;html=1;fontFamily=標楷體;" vertex="1" parent="1">
+          <mxGeometry x="350" y="700" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="VPrhysb8aqTPFq_6Ef2O-121" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="VPrhysb8aqTPFq_6Ef2O-114" target="VPrhysb8aqTPFq_6Ef2O-120">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="VPrhysb8aqTPFq_6Ef2O-114" value="&lt;font face=&quot;Times New Roman&quot;&gt;RAG&amp;nbsp;&lt;/font&gt;&lt;font face=&quot;標楷體&quot;&gt;檢索器&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="512.5" y="700" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="VPrhysb8aqTPFq_6Ef2O-116" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=0;exitDx=0;exitDy=0;entryX=0.339;entryY=1;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="VPrhysb8aqTPFq_6Ef2O-114" target="VPrhysb8aqTPFq_6Ef2O-108">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="VPrhysb8aqTPFq_6Ef2O-117" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="588" y="670" as="sourcePoint" />
+            <mxPoint x="588" y="700" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="VPrhysb8aqTPFq_6Ef2O-118" value="&lt;font face=&quot;標楷體&quot;&gt;檢索&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="497.5" y="670" width="50" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="VPrhysb8aqTPFq_6Ef2O-119" value="&lt;font face=&quot;標楷體&quot;&gt;檢索結果&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="585" y="670" width="70" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="VPrhysb8aqTPFq_6Ef2O-120" value="&lt;font face=&quot;標楷體&quot;&gt;呈現推薦結果&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="680" y="700" width="120" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
