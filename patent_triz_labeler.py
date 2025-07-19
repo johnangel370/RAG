@@ -258,6 +258,7 @@ class TRIZPatentLabeler:
         
         # Add the input text to corpus
         corpus = reference_corpus + [text]
+        # print(corpus)
         
         # Fit TF-IDF vectorizer
         tfidf_matrix = self.tfidf_vectorizer.fit_transform(corpus)
@@ -296,8 +297,11 @@ class TRIZPatentLabeler:
             return {k: v / max_score for k, v in scores.items()}
         
         keyword_scores = normalize_scores(keyword_scores)
+        # print("keyword_scores: ", keyword_scores)
         semantic_scores = normalize_scores(semantic_scores)
+        # print("semantic_scores: ", semantic_scores)
         tfidf_scores = normalize_scores(tfidf_scores)
+        # print("tfidf_scores: ", tfidf_scores)
         
         # Combine scores
         final_scores = {}
@@ -327,9 +331,9 @@ class TRIZPatentLabeler:
         
         # Calculate overall scores (weighted average of sections)
         section_weights = {
-            'abstract': 0.3,
-            'claims': 0.4,
-            'description': 0.3
+            'abstract': 0.2,
+            'claims': 0.3,
+            'description': 0.5
         }
         
         overall_scores = {}
