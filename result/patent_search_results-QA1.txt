@@ -1,6 +1,5 @@
 Patent Search Results
 Query: How can mechanical friction be reduced to improve efficiency?
-Search Date: 2025-07-20 17:21:41
 Total documents loaded: 5000
 Setting retrieval model...
 End of retrieval. Retrieval model setting time: 6.86 seconds

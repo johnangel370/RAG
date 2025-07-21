@@ -4,6 +4,7 @@ from collections import Counter
 from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_chroma import Chroma
 from langchain_core.documents import Document
+from langchain.text_splitter import RecursiveCharacterTextSplitter
 
 
 if __name__ == '__main__':
@@ -16,6 +17,13 @@ if __name__ == '__main__':
     
     # Create a lookup dictionary for patent scores
     score_lookup = {item['patent_num']: item['params_score'] for item in patent_score_data}
+    
+    # Initialize text splitter
+    text_splitter = RecursiveCharacterTextSplitter(
+        chunk_size=1000,
+        chunk_overlap=200,
+        add_start_index=True
+    )
     
     # Load TRIZ parameter names
     triz_parameters = {
@@ -78,7 +86,13 @@ if __name__ == '__main__':
             scores = score_lookup[patent_num]
             
             # Get top 5 TRIZ parameters based on scores
-            sorted_params = sorted(scores.items(), key=lambda x: float(x[1]), reverse=True)[:5]
+            # sorted_params = sorted(scores.items(), key=lambda x: float(x[1]), reverse=True)[:5]
+            sorted_params = sorted(
+                [(param, score) for param, score in scores.items() if float(score) > 0.4],
+                key=lambda x: float(x[1]),
+                reverse=True
+            )
+
             
             # Create top parameters list with names and scores
             top_params = []
@@ -93,31 +107,33 @@ if __name__ == '__main__':
                 })
                 triz_param_names.append(param_name)
             
-            # Create content that includes title, abstract, and TRIZ parameter names
+            # Split patent content into chunks
+            patent_content = f"Abstract: {patent['abstract']}\nDescription: {patent['description']}\nClaims: {patent['claims']}"
+            # patent_content = f"Title: {patent['title']}"
+            chunks = text_splitter.split_text(patent_content)
             triz_params = ", ".join(triz_param_names)
-            content = f"Title: {patent['title']}\nAbstract: {patent['abstract']}\nTRIZ Parameters: {triz_params}"
             
-            # Create Document with metadata including parameter scores
-            doc = Document(
-                page_content=content,
-                metadata={
-                    'id': patent['id'],
-                    'doc_num': patent.get('doc_num', patent['id']),
-                    'title': patent['title'],
-                    'abstract': patent['abstract'],
-                    'params_score': json.dumps(scores),  # All parameter scores
-                    'triz_parameters': json.dumps(top_params)  # Top 5 parameters with details
-                }
-            )
-            print(doc.metadata)
-            documents.append(doc)
+            # Create a Document for each chunk
+            for i, chunk in enumerate(chunks):
+                doc = Document(
+                    page_content=f"Chunk {i+1}: {chunk}\nTRIZ Parameters: {triz_params}",
+                    metadata={
+                        'id': patent['doc_num'],
+                        'title': patent['title'],
+                        'abstract': patent['abstract'],
+                        'chunk_num': i+1,
+                        'total_chunks': len(chunks),
+                        'triz_parameters': json.dumps(top_params)
+                    }
+                )
+                documents.append(doc)
         else:
             print(f"Warning: No score data found for patent {patent_num}")
 
     print(f"Loaded {len(documents)} patent documents")
 
     # Define query
-    query = "increase power methods"
+    query = "How can mechanical friction be reduced to improve efficiency?"
     
     # Open output file for writing results
     output_filename = "patent_search_results.txt"
@@ -127,9 +143,10 @@ if __name__ == '__main__':
         output_file.write(f"Search Date: {time.strftime('%Y-%m-%d %H:%M:%S')}\n")
         output_file.write(f"Total documents loaded: {len(documents)}\n")
 
-        # Use embedding model 
+        # Use embedding model
+        # thenlper/gte-small 
         embedding_model = HuggingFaceEmbeddings(
-            model_name="thenlper/gte-small",
+            model_name="all-MiniLM-L6-v2",
             multi_process=True,
             model_kwargs={"device": "cuda"},
             encode_kwargs={"normalize_embeddings": True},
@@ -146,7 +163,6 @@ if __name__ == '__main__':
         output_file.write(f"End of retrieval. Retrieval model setting time: {end_retrieval - start_retrieval:.2f} seconds\n")
 
         # Query top 10 patents based on TRIZ parameters
-        query = "increase power methods"
         output_file.write("Start querying...\n")
         start = time.time()
         relevant_patents = retriever.invoke(query)
@@ -156,6 +172,7 @@ if __name__ == '__main__':
         output_file.write("Question: " + query + "\n")
         output_file.write(f"Top 10 most relevant patents:\n")
         output_file.write("=" * 50 + "\n")
+        
         
         # Display results
         for i, patent in enumerate(relevant_patents, 1):
@@ -315,3 +332,4 @@ if __name__ == '__main__':
         
         output_file.write(recommendation)
         print(recommendation.strip())
+        
