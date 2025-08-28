@@ -12,7 +12,7 @@ if __name__ == '__main__':
     with open('.\\data\\patent_samples.json', 'r', encoding='utf-8') as f:
         patent_samples = json.load(f)
 
-    with open('patent_score_table.json', 'r', encoding='utf-8') as f:
+    with open('results/labeled_results/patent_score_table.json', 'r', encoding='utf-8') as f:
         patent_score_data = json.load(f)
     
     # Create a lookup dictionary for patent scores
