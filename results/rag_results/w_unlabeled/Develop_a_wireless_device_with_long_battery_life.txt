@@ -1,0 +1,106 @@
+Patent Search Results
+Query: Develop a wireless device with long battery life
+Total documents loaded: 255039
+Setting retrieval model...
+End of retrieval. Retrieval model setting time: 637.31 seconds
+Start querying...
+End of query. Query time: 3.85 seconds
+
+Question: Develop a wireless device with long battery life
+Top 10 most relevant patents:
+==================================================
+1. ID: 13070518
+   Title: Method and device for reducing power drain while camped on a wireless local area network
+   TRIZ Parameters: Area of moving object, Area of stationary object, Loss of information, System complexity, Energy used by moving object, Energy used by stationary object, Loss of time, Productivity, Loss of energy, Ease of operation
+   Abstract: A device ( 200 ) and method ( 300 ) of saving energy in a wireless communication device ( 200 ) capable of running on a wide area network and a local area network, are disclosed. The method ( 300 ) ca...
+
+2. ID: 11574867
+   Title: Apparatus and control interface therefor
+   TRIZ Parameters: Loss of information, Ease of operation, Compatibility or connectability, System complexity, Control complexity
+   Abstract: An apparatus comprises a number of sub-systems and a control interface operably coupled to sub-systems for routing data therebetween. A strobe generation function is operably coupled to the control in...
+
+3. ID: 13190794
+   Title: Wireless device, processing system and method of operating a wireless device
+   TRIZ Parameters: Loss of information, System complexity, Ease of operation, Energy used by moving object, Control complexity, Duration of action of moving object, Area of moving object, Duration of action of stationary object, Loss of time, Energy used by stationary object, Amount of information
+   Abstract: A wireless device is wirelessly connected to a wireless network which is controlled by network control apparatus. The wireless device operates in a first activity state in which data can be transmitte...
+
+4. ID: 13070518
+   Title: Method and device for reducing power drain while camped on a wireless local area network
+   TRIZ Parameters: Area of moving object, Area of stationary object, Loss of information, System complexity, Energy used by moving object, Energy used by stationary object, Loss of time, Productivity, Loss of energy, Ease of operation
+   Abstract: A device ( 200 ) and method ( 300 ) of saving energy in a wireless communication device ( 200 ) capable of running on a wide area network and a local area network, are disclosed. The method ( 300 ) ca...
+
+5. ID: 13608496
+   Title: Wireless local area network ad-hoc mode for reducing power consumption
+   TRIZ Parameters: Area of moving object, Length or angle of moving object, Volume of moving object, Compatibility or connectability, Weight of moving object, Loss of information, Loss of time, Energy used by stationary object, Energy used by moving object, System complexity
+   Abstract: A first mobile station configured to operate, in an ad-hoc network, with a second mobile station. The first mobile station includes a transceiver configured to receive a beacon. The beacon indicates a...
+
+6. ID: 13070518
+   Title: Method and device for reducing power drain while camped on a wireless local area network
+   TRIZ Parameters: Area of moving object, Area of stationary object, Loss of information, System complexity, Energy used by moving object, Energy used by stationary object, Loss of time, Productivity, Loss of energy, Ease of operation
+   Abstract: A device ( 200 ) and method ( 300 ) of saving energy in a wireless communication device ( 200 ) capable of running on a wide area network and a local area network, are disclosed. The method ( 300 ) ca...
+
+7. ID: 13190794
+   Title: Wireless device, processing system and method of operating a wireless device
+   TRIZ Parameters: Loss of information, System complexity, Ease of operation, Energy used by moving object, Control complexity, Duration of action of moving object, Area of moving object, Duration of action of stationary object, Loss of time, Energy used by stationary object, Amount of information
+   Abstract: A wireless device is wirelessly connected to a wireless network which is controlled by network control apparatus. The wireless device operates in a first activity state in which data can be transmitte...
+
+8. ID: 12357915
+   Title: Power saving technique for a wireless device
+   TRIZ Parameters: Compatibility or connectability
+   Abstract: A system and method are disclosed for decreasing the amount of power consumed by a wireless signal receiver in a wireless device. Received data is communicated from the receiver to a play-out buffer i...
+
+9. ID: 12384012
+   Title: Disparate radios in a wireless mesh network
+   TRIZ Parameters: Loss of information, Energy used by moving object, Energy used by stationary object, Power, Area of moving object, Control complexity
+   Abstract: A wireless mesh network that makes use of strategically placed nodes with radios having superior communication range through the use of high gain antennas, MIMO technology, high power transmitters, hi...
+
+10. ID: 12357915
+   Title: Power saving technique for a wireless device
+   TRIZ Parameters: Compatibility or connectability
+   Abstract: A system and method are disclosed for decreasing the amount of power consumed by a wireless signal receiver in a wireless device. Received data is communicated from the receiver to a play-out buffer i...
+
+
+============================================================
+VERIFICATION RESULTS
+============================================================
+
+1. RELEVANCE SCORE VERIFICATION:
+----------------------------------------
+1. ID: 13070518 (Similarity Score: 0.8791)
+2. ID: 11574867 (Similarity Score: 0.8781)
+3. ID: 13190794 (Similarity Score: 0.8739)
+4. ID: 13070518 (Similarity Score: 0.8660)
+5. ID: 13608496 (Similarity Score: 0.8612)
+6. ID: 13070518 (Similarity Score: 0.8418)
+7. ID: 13190794 (Similarity Score: 0.8394)
+8. ID: 12357915 (Similarity Score: 0.8337)
+9. ID: 12384012 (Similarity Score: 0.7550)
+10. ID: 12357915 (Similarity Score: 0.7269)
+
+2. STATISTICAL VERIFICATION:
+----------------------------------------
+Total patents retrieved: 10
+Unique patent IDs: 6
+
+Most common TRIZ parameters in results:
+  - Loss of information: 8 occurrences
+  - Energy used by moving object: 7 occurrences
+  - Energy used by stationary object: 7 occurrences
+  - Area of moving object: 7 occurrences
+  - System complexity: 7 occurrences
+  - Ease of operation: 6 occurrences
+  - Loss of time: 6 occurrences
+  - Compatibility or connectability: 4 occurrences
+  - Control complexity: 4 occurrences
+  - Area of stationary object: 3 occurrences
+
+TRIZ parameter scores in results:
+  - Average score: 0.548
+  - Max score: 0.920
+  - Min score: 0.402
+
+3. QUERY-RESULT RELEVANCE SUMMARY:
+----------------------------------------
+Average similarity score: 0.8355
+
+✅ HIGH RELEVANCE: Query results show strong similarity to your search.

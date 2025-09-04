@@ -1,0 +1,106 @@
+Patent Search Results
+Query: Develop a bladeless electric fan
+Total documents loaded: 5000
+Setting retrieval model...
+End of retrieval. Retrieval model setting time: 6.64 seconds
+Start querying...
+End of query. Query time: 5.20 seconds
+
+Question: Develop a bladeless electric fan
+Top 10 most relevant patents:
+==================================================
+1. ID: 11670344
+   Title: Turbine shroud cooling system
+   TRIZ Parameters: Temperature
+   Abstract: A method of cooling a shroud ring in a turbine section of gas turbine engine includes identifying a series of alternating high temperature regions and lower temperature regions of a circumferential te...
+
+2. ID: 12901701
+   Title: Rotor blade with control tube
+   TRIZ Parameters: Control complexity, Automation, Adaptability or versatility, Shape
+   Abstract: A system comprising a rotor blade ( 1 ), in particular of the tail rotor of a rotary wing aircraft, in a fiber-reinforced composite design, with a blade section ( 5 ) and with a coupling section ( 9 )...
+
+3. ID: 12915208
+   Title: Gas turbine engine with variable area fan nozzle
+   TRIZ Parameters: Area of stationary object, Shape, Area of moving object, Adaptability or versatility, Stress or pressure, Loss of energy
+   Abstract: A bypass gas turbine engine includes a variable area fan nozzle with a second fan nacelle section axially movable relative to a first fan nacelle section to define an auxiliary port to vary a fan nozz...
+
+4. ID: 13417932
+   Title: Razor with blade heating system
+   TRIZ Parameters: Temperature, Power, Energy used by moving object
+   Abstract: In a razor having a handle and a blade cartridge containing one or more blades, a system is provided for selectively heating the blades to a controlled temperature range. The blade heating system incl...
+
+5. ID: 12464476
+   Title: Turbine blade with single tip rail with a mid-positioned deflector portion
+   TRIZ Parameters: Temperature, Energy used by moving object
+   Abstract: A turbine blade is provided comprising: an airfoil including an airfoil outer wall extending radially outwardly from a blade root, a squealer tip section located at an end of the airfoil distal from t...
+
+6. ID: 13149513
+   Title: Noise reducer for rotor blade in wind turbine
+   TRIZ Parameters: Noise
+   Abstract: A rotor blade assembly and a method for reducing the noise of a rotor blade for a wind turbine are disclosed. The rotor blade has surfaces defining a pressure side, a suction side, a leading edge, and...
+
+7. ID: 13533742
+   Title: Centrifugal fan
+   TRIZ Parameters: Ease of operation
+   Abstract: A centrifugal fan includes a housing, a driving device, and a fan impeller. The housing has a hollow chamber which has a central axis. The driving device is located at the central axis of the hollow c...
+
+8. ID: 13500061
+   Title: Centrifugal ceiling fan
+   TRIZ Parameters: 
+   Abstract: The present document describes a centrifugal ceiling fan. The fan comprises a casing, a motor and a centrifugal propeller. The casing comprises an upper surface comprising an air inlet and a lower sur...
+
+9. ID: 12639006
+   Title: Fan control system
+   TRIZ Parameters: Temperature, Control complexity, Power
+   Abstract: A fan control system includes a temperature detecting circuit and a rotation rate control circuit. The detecting circuit includes a first amplifier, a second amplifier, and a thermistor. The control c...
+
+10. ID: 13714518
+   Title: Turbine blade with integrated serpentine and axial tip cooling circuits
+   TRIZ Parameters: Temperature
+   Abstract: An air cooled turbine blade including leading and trailing edges, and pressure and suction side walls extending between the leading and trailing edges. Leading and trailing edge cooling circuits exten...
+
+
+============================================================
+VERIFICATION RESULTS
+============================================================
+
+1. RELEVANCE SCORE VERIFICATION:
+----------------------------------------
+1. ID: 11670344 (Similarity Score: 1.4450)
+2. ID: 12901701 (Similarity Score: 1.4036)
+3. ID: 12915208 (Similarity Score: 1.3849)
+4. ID: 13417932 (Similarity Score: 1.3734)
+5. ID: 12464476 (Similarity Score: 1.3313)
+6. ID: 13149513 (Similarity Score: 1.3284)
+7. ID: 13533742 (Similarity Score: 1.2712)
+8. ID: 13500061 (Similarity Score: 1.2668)
+9. ID: 12639006 (Similarity Score: 1.1351)
+10. ID: 13714518 (Similarity Score: 1.1214)
+
+2. STATISTICAL VERIFICATION:
+----------------------------------------
+Total patents retrieved: 10
+Unique patent IDs: 10
+
+Most common TRIZ parameters in results:
+  - Temperature: 5 occurrences
+  - Control complexity: 2 occurrences
+  - Power: 2 occurrences
+  - Energy used by moving object: 2 occurrences
+  - Shape: 2 occurrences
+  - Adaptability or versatility: 2 occurrences
+  - Ease of operation: 1 occurrences
+  - Noise: 1 occurrences
+  - Area of stationary object: 1 occurrences
+  - Area of moving object: 1 occurrences
+
+TRIZ parameter scores in results:
+  - Average score: 0.607
+  - Max score: 1.000
+  - Min score: 0.406
+
+3. QUERY-RESULT RELEVANCE SUMMARY:
+----------------------------------------
+Average similarity score: 1.3061
+
+✅ HIGH RELEVANCE: Query results show strong similarity to your search.

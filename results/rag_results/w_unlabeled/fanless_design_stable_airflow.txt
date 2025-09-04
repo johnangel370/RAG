@@ -1,0 +1,105 @@
+Patent Search Results
+Query: fanless design, stable airflow
+Total documents loaded: 255039
+Setting retrieval model...
+End of retrieval. Retrieval model setting time: 638.35 seconds
+Start querying...
+End of query. Query time: 3.99 seconds
+
+Question: fanless design, stable airflow
+Top 10 most relevant patents:
+==================================================
+1. ID: 13647018
+   Title: Efficient cooling duct
+   TRIZ Parameters: Temperature
+   Abstract: A cooling system comprises an electronics module and a duct. The electronics module produces more heat at a first location than at a second location, and is rated to a safe operating temperature. The ...
+
+2. ID: 13437253
+   Title: Air mover reversing for work vehicle cooling package
+   TRIZ Parameters: Temperature
+   Abstract: A method for reversing an air mover to remove debris from a cooling system of a work vehicle. In one embodiment, the largest required fan speed for cooling the engine coolant, hydraulic oil and the ch...
+
+3. ID: 12915208
+   Title: Gas turbine engine with variable area fan nozzle
+   TRIZ Parameters: Area of stationary object, Shape, Area of moving object, Adaptability or versatility, Stress or pressure, Loss of energy
+   Abstract: A bypass gas turbine engine includes a variable area fan nozzle with a second fan nacelle section axially movable relative to a first fan nacelle section to define an auxiliary port to vary a fan nozz...
+
+4. ID: 13544936
+   Title: Electronic device
+   TRIZ Parameters: Temperature, Area of moving object, Energy used by moving object, Area of stationary object, Ease of operation
+   Abstract: An electronic device includes: a casing in which electronic components including a heat-emitting component which emits heat during operation are accommodated; a heat-dissipating component including a ...
+
+5. ID: 13533742
+   Title: Centrifugal fan
+   TRIZ Parameters: Ease of operation
+   Abstract: A centrifugal fan includes a housing, a driving device, and a fan impeller. The housing has a hollow chamber which has a central axis. The driving device is located at the central axis of the hollow c...
+
+6. ID: 13533742
+   Title: Centrifugal fan
+   TRIZ Parameters: Ease of operation
+   Abstract: A centrifugal fan includes a housing, a driving device, and a fan impeller. The housing has a hollow chamber which has a central axis. The driving device is located at the central axis of the hollow c...
+
+7. ID: 13265281
+   Title: Electronic device cooling structure
+   TRIZ Parameters: Temperature
+   Abstract: A cooling structure ( 10 A) for an electronic device includes: a housing provided with an air inlet and an air outlet; a fan; and a circuit board ( 2 ) disposed in the housing. A heat generating compo...
+
+8. ID: 13533742
+   Title: Centrifugal fan
+   TRIZ Parameters: Ease of operation
+   Abstract: A centrifugal fan includes a housing, a driving device, and a fan impeller. The housing has a hollow chamber which has a central axis. The driving device is located at the central axis of the hollow c...
+
+9. ID: 13533742
+   Title: Centrifugal fan
+   TRIZ Parameters: Ease of operation
+   Abstract: A centrifugal fan includes a housing, a driving device, and a fan impeller. The housing has a hollow chamber which has a central axis. The driving device is located at the central axis of the hollow c...
+
+10. ID: 13500061
+   Title: Centrifugal ceiling fan
+   TRIZ Parameters: 
+   Abstract: The present document describes a centrifugal ceiling fan. The fan comprises a casing, a motor and a centrifugal propeller. The casing comprises an upper surface comprising an air inlet and a lower sur...
+
+
+============================================================
+VERIFICATION RESULTS
+============================================================
+
+1. RELEVANCE SCORE VERIFICATION:
+----------------------------------------
+1. ID: 13647018 (Similarity Score: 0.9523)
+2. ID: 13437253 (Similarity Score: 0.9497)
+3. ID: 12915208 (Similarity Score: 0.9432)
+4. ID: 13544936 (Similarity Score: 0.9368)
+5. ID: 13533742 (Similarity Score: 0.9354)
+6. ID: 13533742 (Similarity Score: 0.9266)
+7. ID: 13265281 (Similarity Score: 0.9237)
+8. ID: 13533742 (Similarity Score: 0.8943)
+9. ID: 13533742 (Similarity Score: 0.8426)
+10. ID: 13500061 (Similarity Score: 0.8357)
+
+2. STATISTICAL VERIFICATION:
+----------------------------------------
+Total patents retrieved: 10
+Unique patent IDs: 7
+
+Most common TRIZ parameters in results:
+  - Ease of operation: 5 occurrences
+  - Temperature: 4 occurrences
+  - Area of moving object: 2 occurrences
+  - Area of stationary object: 2 occurrences
+  - Energy used by moving object: 1 occurrences
+  - Shape: 1 occurrences
+  - Adaptability or versatility: 1 occurrences
+  - Stress or pressure: 1 occurrences
+  - Loss of energy: 1 occurrences
+
+TRIZ parameter scores in results:
+  - Average score: 0.608
+  - Max score: 1.000
+  - Min score: 0.406
+
+3. QUERY-RESULT RELEVANCE SUMMARY:
+----------------------------------------
+Average similarity score: 0.9140
+
+✅ HIGH RELEVANCE: Query results show strong similarity to your search.

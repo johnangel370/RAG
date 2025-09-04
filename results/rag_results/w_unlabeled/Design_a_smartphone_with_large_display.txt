@@ -1,0 +1,106 @@
+Patent Search Results
+Query: Design a smartphone with large display
+Total documents loaded: 255039
+Setting retrieval model...
+End of retrieval. Retrieval model setting time: 647.22 seconds
+Start querying...
+End of query. Query time: 3.98 seconds
+
+Question: Design a smartphone with large display
+Top 10 most relevant patents:
+==================================================
+1. ID: 12544823
+   Title: Large size tiled display device
+   TRIZ Parameters: 
+   Abstract: A large size tiled display device includes a plurality of display panels having an image display part including a plurality of pixels. Each pixel includes at least three sub-pixels. A frame has a plur...
+
+2. ID: 12544823
+   Title: Large size tiled display device
+   TRIZ Parameters: 
+   Abstract: A large size tiled display device includes a plurality of display panels having an image display part including a plurality of pixels. Each pixel includes at least three sub-pixels. A frame has a plur...
+
+3. ID: 11846360
+   Title: Apparatus for selectively backlighting a material
+   TRIZ Parameters: Illumination intensity, Weight of moving object, Aesthetics or appearance, Ease of operation, System complexity
+   Abstract: A backlighting device ( 300, 400, 500, 600 ) emitting light having a first wavelength includes a first radiation emission device ( 302 ), e.g., an electroluminescent lamp, for emitting radiation havin...
+
+4. ID: 12622639
+   Title: Substrate with chips mounted thereon, method of manufacturing substrate with chips mounted thereon, display, and method of manufacturing display
+   TRIZ Parameters: Shape, Manufacturability, Illumination intensity, Weight of stationary object, System complexity
+   Abstract: Disclosed herein is a substrate with chip mounted thereon, including: a solder pattern having a plan-view shape in which projected parts are projected radially from a central part; and a chip fixed in...
+
+5. ID: 12159073
+   Title: Foldable mobile equipment
+   TRIZ Parameters: Ease of operation, Length or angle of moving object, Area of moving object, Volume of moving object, Weight of moving object, Adaptability or versatility
+   Abstract: Foldable mobile equipment is provided with a first housing 3 including a liquid crystal display part (display part) at the front face thereof, a second housing 5 including an operation part at the fro...
+
+6. ID: 12159073
+   Title: Foldable mobile equipment
+   TRIZ Parameters: Ease of operation, Length or angle of moving object, Area of moving object, Volume of moving object, Weight of moving object, Adaptability or versatility
+   Abstract: Foldable mobile equipment is provided with a first housing 3 including a liquid crystal display part (display part) at the front face thereof, a second housing 5 including an operation part at the fro...
+
+7. ID: 12622639
+   Title: Substrate with chips mounted thereon, method of manufacturing substrate with chips mounted thereon, display, and method of manufacturing display
+   TRIZ Parameters: Shape, Manufacturability, Illumination intensity, Weight of stationary object, System complexity
+   Abstract: Disclosed herein is a substrate with chip mounted thereon, including: a solder pattern having a plan-view shape in which projected parts are projected radially from a central part; and a chip fixed in...
+
+8. ID: 12430811
+   Title: Digital light management controller
+   TRIZ Parameters: Illumination intensity, Weight of moving object, Amount of information
+   Abstract: A light management unit (LMU) includes multiple brightness compensation modules and algorithms mixed together in a digital domain. The LMU is configured to receive content data, such as gamma correcti...
+
+9. ID: 12544823
+   Title: Large size tiled display device
+   TRIZ Parameters: 
+   Abstract: A large size tiled display device includes a plurality of display panels having an image display part including a plurality of pixels. Each pixel includes at least three sub-pixels. A frame has a plur...
+
+10. ID: 11936251
+   Title: Electro-luminescent display device
+   TRIZ Parameters: Illumination intensity, Loss of information, Energy used by moving object, Energy used by stationary object, Power
+   Abstract: An electro-luminescent display includes a first array of light-emitting elements. Each of these light-emitting elements has an optical element. A second array of light-emitting elements also includes ...
+
+
+============================================================
+VERIFICATION RESULTS
+============================================================
+
+1. RELEVANCE SCORE VERIFICATION:
+----------------------------------------
+1. ID: 12544823 (Similarity Score: 1.0572)
+2. ID: 12544823 (Similarity Score: 1.0570)
+3. ID: 11846360 (Similarity Score: 1.0507)
+4. ID: 12622639 (Similarity Score: 1.0393)
+5. ID: 12159073 (Similarity Score: 1.0359)
+6. ID: 12159073 (Similarity Score: 1.0244)
+7. ID: 12622639 (Similarity Score: 1.0197)
+8. ID: 12430811 (Similarity Score: 1.0064)
+9. ID: 12544823 (Similarity Score: 0.9645)
+10. ID: 11936251 (Similarity Score: 0.9575)
+
+2. STATISTICAL VERIFICATION:
+----------------------------------------
+Total patents retrieved: 10
+Unique patent IDs: 6
+
+Most common TRIZ parameters in results:
+  - Illumination intensity: 5 occurrences
+  - Weight of moving object: 4 occurrences
+  - System complexity: 3 occurrences
+  - Ease of operation: 3 occurrences
+  - Shape: 2 occurrences
+  - Manufacturability: 2 occurrences
+  - Weight of stationary object: 2 occurrences
+  - Length or angle of moving object: 2 occurrences
+  - Area of moving object: 2 occurrences
+  - Volume of moving object: 2 occurrences
+
+TRIZ parameter scores in results:
+  - Average score: 0.609
+  - Max score: 0.872
+  - Min score: 0.419
+
+3. QUERY-RESULT RELEVANCE SUMMARY:
+----------------------------------------
+Average similarity score: 1.0212
+
+✅ HIGH RELEVANCE: Query results show strong similarity to your search.
